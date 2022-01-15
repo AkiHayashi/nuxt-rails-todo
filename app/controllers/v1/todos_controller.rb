@@ -1,7 +1,7 @@
 class V1::TodosController < ApplicationController
   def index
     todo = Todo.all
-    render json:todo
+    render json: todo
   end
 
   def create
@@ -26,6 +26,4 @@ class V1::TodosController < ApplicationController
   def todo_params
     params.require(:todo).permit(:title, :user_id)
   end
-
 end
-
