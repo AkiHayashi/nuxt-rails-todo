@@ -16,9 +16,7 @@ class V1::TodosController < ApplicationController
 
   def destroy
     todo = Todo.find(params[:id])
-    if todo.destroy
-      render json: todo
-    end
+    render json: todo if todo.destroy
   end
 
   private
